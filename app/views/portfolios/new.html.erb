@@ -16,6 +16,16 @@
     <%= form.text_area :body %>
   </div>
 
+  <ul>
+  <!-- This is type of connection in rails forms and its inheriting from "form_with" method. It gives the ability to create nested forms and have nested attributes for forms -->
+    <%= form.fields_for :technologies do |technology_form| %>
+    <li>
+      <%= technology_form.label :name %>
+      <%= technology_form.text_field :name %>
+    </li>
+    <% end -%>
+  </ul>
+
   <div class="actions">
     <%= form.submit %>
   </div>

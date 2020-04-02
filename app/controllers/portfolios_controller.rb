@@ -1,14 +1,21 @@
 class PortfoliosController < ApplicationController
 	def index
 		@portfolio_items = Portfolio.all
-	end
+  end
+
+# custom action example
+  def angular
+    @angular_portfolio_items = Portfolio.angular
+ end
 
 	def new
 		@portfolio_item = Portfolio.new
+    #build is going to instantiate 3 verions of @portfolio_item with technologies so here we are creating 3 types of technologies and make them available to the form
+    3.times {@portfolio_item.technologies.build}
 	end
 
 def create
-    @portfolio_item = Portfolio.new(params.require(:portfolio).permit(:title,:subtitle,:body))
+    @portfolio_item = Portfolio.new(params.require(:portfolio).permit(:title,:subtitle,:body,technologies_attributes: [:name]))
 
     respond_to do |format|
       if @portfolio_item.save
@@ -54,11 +61,13 @@ def destroy
       format.html { redirect_to portfolios_url, notice: 'Record was removed.' }
     end
   end
+end
+
 
 
 
     
-  end
+
 
 
 
