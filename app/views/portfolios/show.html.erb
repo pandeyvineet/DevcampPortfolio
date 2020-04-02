@@ -3,3 +3,12 @@
 <h1><%= @portfolio_item.title %> </h1>
 <em><%= @portfolio_item.subtitle %> </em>
 <p><%= @portfolio_item.body %> </p>
+
+<h2>Technologies used:</h2>
+<!--this is like we did in rails console ,we grabbed last portfolio item and called technologies(Portfoli.last_item.technologies something like that -->
+<%= @portfolio_item.technologies.each do |t| %>
+<p>
+	<!-- iterate through each of the technologies that are associated with @portfolio_item -->
+	<%= t.name %>
+</p>
+<% end %>
