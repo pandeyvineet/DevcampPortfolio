@@ -6132,6 +6132,11 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
     hash-base "^3.0.0"
     inherits "^2.0.1"
 
+ruby-on-rails@0.0.0:
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/ruby-on-rails/-/ruby-on-rails-0.0.0.tgz#bcda96f1c48866d06ff04649d6ce4a88707bf5a6"
+  integrity sha512-oUm+w13oYecgiqviPn4f9TORFHGdBz+qErBoTJ+ag1oSRzpRQ2WOk1OLmuuTILasOyqs5+MuK3FZBD5raQKbJw==
+
 run-queue@^1.0.0, run-queue@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/run-queue/-/run-queue-1.0.3.tgz#e848396f057d223f24386924618e25694161ec47"
